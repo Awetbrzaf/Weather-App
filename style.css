@@ -10,7 +10,7 @@ body{
 .card{
 	width: 90%;
 	max-width: 470px;
-	background: linear-gradient(135deg,#00feba,#5b548a);
+	background: linear-gradient(135deg,#2a2a2a,#fff);
 	color: #fff;
 	margin: 100px auto 0;
 	border-radius: 20px;
@@ -82,12 +82,28 @@ body{
 	align-items: center;
 	text-align: left;
 }
-.detail{
+.details{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 20px;
 	margin-top: 50px;
+	gap: 20px;
+
+}
+.col{
+	display: flex;
+	align-items: center;
+	text-align: left;
+	width: 250px;
+	height: 150px;
+	border-radius: 20px;
+	color: #fff;
+	background-color: #1a1a1a;
+	padding: 10px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 .col img{
 	width: 40px;
@@ -103,6 +119,18 @@ body{
 	margin-top: -6px;
 }
 .drizzle, .cloud{
+	font-size: 28px;
+	margin-top: -6px;
+}
+.sunset, .sunrise{
+	font-size: 28px;
+	margin-top: -6px;
+}
+.visibility, .pressure{
+	font-size: 28px;
+	margin-top: -6px;
+}
+.Air-Quality-Index, .Real-Feel{
 	font-size: 28px;
 	margin-top: -6px;
 }

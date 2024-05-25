@@ -25,34 +25,107 @@
   	<h1 class="temp">35°c</h1>
   	<h2 class="city">Addis Ababa</h2>
   	<div class="details">
+
+       <div class="col">
+        <img src="images/humidity.png">
+         <div>
+            <p class="humidity">50%</p>
+            <p>Humidity</p>
+
   	   <div class="col">
-  		<img src="images/humidity.png">
+  		<img src="images/09n.svg
   	     <div>
            	<p class="humidity">50%</p>
   	        <p>Humidity</p>
          </div>
        </div>
       <div class="col">
-  		<img src="images/wind.png">
-  	     <div>
-  	      <p class="wind">15 km/h</p>
-  	      <p>wind speed</p>
+        <img src="images/wind.png">
+         <div>
+          <p class="wind">15 km/h</p>
+          <p>wind speed</p>
          </div>
       </div>
-     </div>
-	  	<div class="detail">
-  	   <div class="col">
-  		<img src="images/clouds.png">
-  	     <div>
-           	<p class="Clouds">50</p>
-  	        <p>Clouds</p>
+     <div class="col">
+        <img src="images/pre.jpg">
+         <div>
+          <p class="pressure">15 km/h</p>
+          <p>Pressure</p>
+         </div>
+      </div>
+		<div class="details">
+       <div class="col">
+        <img src="images/01d.svg">
+         <div>
+            <p class="clear">50%</p>
+            <p>Clear</p>
          </div>
        </div>
       <div class="col">
-  		<img src="images/Rain.png">
+        <img src="images/drizzle.png">
+         <div>
+          <p class="drizzle">15 km/h</p>
+          <p>Drizzle</p>
+         </div>
+      </div>
+     </div>
+   
+    <div class="details">
+       <div class="col">
+        <img src="images/02d.svg">
+         <div>
+            <p class="sunset">50%</p>
+            <p>Sunset</p>
+         </div>
+       </div>
+      <div class="col">
+        <img src="images/03d.svg">
+         <div>
+          <p class="Sunrise">15 km/h</p>
+          <p>Sunrise</p>
+         </div>
+      </div>
+     </div>
+    <div class="details">
+       <div class="col">
+        <img src="images/humidity.png">
+         <div>
+            <p class="visibility">50%</p>
+            <p>visibility</p>
+         </div>
+       </div>
+      
+     </div>
+     <div class="details">
+       <div class="col">
+        <img src="images/aq.jpg">
+         <div>
+            <p class=" Air-Quality-Index">50%</p>
+            <p> Air Quality Index</p>
+         </div>
+       </div>
+     
+     </div>
+      <div class="details">
+       <div class="col">
+        <img src="images/09n.svg">
+         <div>
+            <p class="rain">50%</p>
+            <p>Rain</p>
+         </div>
+       </div>
+      <div class="col">
+
+        <img src="images/snowy-6.svg">
+         <div>
+          <p class="snow">15 km/h</p>
+          <p>Snow</p>
+
+  		<img src="images/09n.svg">
   	     <div>
   	      <p class="Rain">15 </p>
   	      <p>Rain</p>
+
          </div>
       </div>
      </div>
@@ -88,72 +161,68 @@
          </div>
       </div>
      </div>
-   
+    <div class="details">
+       <div class="col">
+        <img src="images/02n.svg">
+         <div>
+            <p class="sunset">50%</p>
+            <p>Sunset</p>
+         </div>
+       </div>
+      <div class="col">
+        <img src="images/03d.svg">
+         <div>
+          <p class="clear">15 km/h</p>
+          <p>Sunrise</p>
+         </div>
+      </div>
+     </div>
+    <div class="details">
+       <div class="col">
+        <img src="images/dd.png">
+         <div>
+            <p class="visibility">50%</p>
+            <p>visibility</p>
+         </div>
+       </div>
+      <div class="col">
+        <img src="images/humidity.png">
+         <div>
+          <p class="pressure">15 km/h</p>
+          <p>Pressure</p>
+         </div>
+      </div>
+   <div class="col">
+        <img src="images/tem.jpg">
+         <div>
+          <p class="tempreture">15 km/h</p>
+          <p>Tempreture</p>
+         </div>
+      </div>
+     </div>
+     </div>
+      <div class="details">
+       <div class="col">
+        <img src="images/humidity.png">
+         <div>
+            <p class=" Air-Quality-Index">50%</p>
+            <p> Air Quality Index</p>
+         </div>
+       </div>
+      <div class="col">
+        <img src="images/wind.png">
+         <div>
+          <p class="Real-Feel">15 km/h</p>
+          <p>Real Feel</p>
+         </div>
+      </div>
+     </div>
+  
    
     </div>
+    </div>
  </div>
- <script >
- 	const apikey = "3b2bd01e93ff1db2dfde28896fdcce0b";
- 	const apiurl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
-
- 	const searchBox = document.querySelector(".search input");
- 	const searchBtn = document.querySelector(".search button");
- 	const weatherIcon = document.querySelector(".Weather-icon");
-
- 	async function checkweather(city){
- 		const response = await fetch(apiurl + city + `&appid=${apikey}`);
-
- 		if(response.status == 404){
- 			document.querySelector(".error").style.display="block";
- 			document.querySelector(".Weather").style.display="none";
- 		}else{
-
-
- 		var data = await response.json();
-
- 	
-
- 		document.querySelector(".city").innerHTML = data.name;
- 		document.querySelector(".temp").innerHTML = Math.round(data.main.temp ) + "°c";
- 		document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
- 		document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
-
- 		if(data.weather[0].main == "Clouds"){
- 			weatherIcon.src = "images/clouds.png";
- 		}
- 		else if(data.weather[0].main == "Clear"){
- 			weatherIcon.src = "images/clear.png";
-
- 	    }
- 	    else if(data.weather[0].main == "Rain"){
- 			weatherIcon.src = "images/rain.png";
-
- 	    }
- 	    else if(data.weather[0].main == "Drizzle"){
- 			weatherIcon.src = "images/drizzle.png";
-
- 	    }
- 	    else if(data.weather[0].main == "Mist"){
- 			weatherIcon.src = "images/mist.png";
-
- 	    }
-			else if(data.weather[0].main == "snow"){
- 			weatherIcon.src = "images/snow.png";
-
- 	    }
-
- 	     document.querySelector(".Weather").style.display= "block";
- 	     document.querySelector(".error").style.display= "none";
-         
-
-
-     }
-
-   }
-   searchBtn.addEventListener("click" , ()=>{
-	checkweather(searchBox.value);
-     });
-   
+ <script src="script.js">  
  </script>
   </body>
   </html>
